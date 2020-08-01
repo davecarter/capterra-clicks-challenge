@@ -8,7 +8,6 @@ const sortByKeyOutputFixture = require('./fixtures/sortByKeyOutputFixture.json')
 const getMaxEntriesByIpInputFixture = require('./fixtures/getMaxEntriesByIpInputFixture.json')
 const getMaxEntriesByIpOutputFixture = require('./fixtures/getMaxEntriesByIpOutputFixture.json')
 const {timestamp} = require('./fixtures/timestamp')
-const {MAX_CLICKS_BY_IP} = require('../app/config')
 
 describe('Given an array of clicks', () => {
   test('Should get its timestamp and return its numeric hour value', () => {
