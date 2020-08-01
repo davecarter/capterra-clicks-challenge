@@ -1,0 +1,16 @@
+{
+  "name": "capterra-clicks-challenge",
+  "version": "1.0.0",
+  "description": "Capterra Clicks Challege",
+  "author": "David Garcia",
+  "main": "index.js",
+  "scripts": {
+    "solution": "node index.js",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "26.2.2"
+  }
+}
