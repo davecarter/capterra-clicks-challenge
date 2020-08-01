@@ -20,10 +20,10 @@ const sortByKey = key => {
       : a[key].localeCompare(b[key])
 }
 
-const getMaxEntriesByIp = data => {
-  let clicksByIp = data.sort(sortByKey('ip'))
-  return clicksByIp
-}
+const getMaxEntriesByIp = data => 
+  data
+    .sort(sortByKey('ip'))
+    .slice(0, MAX_CLICKS_BY_IP)
 
 module.exports = {
   getClickHour,
