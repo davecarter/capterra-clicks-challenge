@@ -1,42 +1,32 @@
 const timestamp = require("../__test__/fixtures/timestamp")
+const {MAX_CLICKS_BY_IP} = require('./config')
 
 // Get click hour
 const getClickHour = timestamp => 
-  new Date(timestamp)
-    .getHours()
-    // .toString()
-    // .padStart(2,'0')
-    // .padEnd(8,':00:00')
-
-const getMostExpensiveClick = data => 
-  data.sort((a,b) => b.amount - a.amount)
-
+  new Date(timestamp).getHours()
 
 // A custom sort helper function
-const sortByKey = data => {
+const sortByKey = key => {
   let sortOrder = 1
 
-  if(property[0] === "-") {
+  if(key[0] === "-") {
       sortOrder = -1;
-      property = property.substr(1);
+      key = key.substr(1);
   }
 
-  return function (a,b) {
+  return (a,b) => 
     sortOrder == -1
-      ? b[property].localeCompare(a[property])
-      : a[property].localeCompare(b[property])
-    }        
+      ? b[key].localeCompare(a[key])
+      : a[key].localeCompare(b[key])
 }
 
-
-
-let reduceClicksList = clicks => {
-  let reducedClickListArr = []
-  return clicks
+const getMaxEntriesByIp = data => {
+  let clicksByIp = data.sort(sortByKey('ip'))
+  return clicksByIp
 }
 
 module.exports = {
   getClickHour,
   getMaxEntriesByIp,
-  reduceClicksList
+  sortByKey
 }
