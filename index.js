@@ -7,4 +7,4 @@ const outputFileData = JSON.stringify(reducedClicksList)          // formats out
 
 fs.writeFileSync('./resultset.json', outputFileData)              // sends formatted data to file
   
-console.log(reduceClicksList(clicks))
+reduceClicksList(clicks)
