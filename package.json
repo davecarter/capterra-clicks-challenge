@@ -5,7 +5,7 @@
   "author": "David Garcia",
   "main": "index.js",
   "scripts": {
-    "solution": "node index.js",
+    "solution": "echo \"\\x1b[30m\\x1b[42m => resultset.json file created successfuly! \\x1b[0m\" && node index.js",
     "test": "jest",
     "test:watch": "jest --watch"
   },
