@@ -1,4 +1,3 @@
-const fs = require('fs');
 const clicks = require('../clicks.json');
 const finalOutputFixture = require('./fixtures/finalOutputFixture.json')
 
