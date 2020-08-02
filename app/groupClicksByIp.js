@@ -1,4 +1,4 @@
-const { MAX_CLICKS_BY_HR } = require('./config')
+const { MAX_CLICKS_BY_IP } = require('./config')
 
 // build an object of clicks grouped by IP and based on its hour slot
 const groupClicksByIp = data => 
@@ -25,9 +25,9 @@ const groupClicksByIp = data =>
     // when number of clicks by IP exceeds a maximum value any more entries
     // will be added
     acc[ip] = Object.fromEntries(
-      Object.entries(acc[ip]).slice(0, MAX_CLICKS_BY_HR)
+      Object.entries(acc[ip]).slice(0, MAX_CLICKS_BY_IP)
     );
-  
+  console.log(acc)
     return acc;
   }, {});
 
