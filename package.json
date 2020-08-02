@@ -1,7 +1,7 @@
 {
   "name": "capterra-clicks-challenge",
   "version": "1.0.0",
-  "description": "Capterra Clicks Challege",
+  "description": "Take home assignment - Capterra Clicks Challege",
   "author": "David Garcia",
   "main": "index.js",
   "scripts": {
