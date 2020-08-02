@@ -27,7 +27,7 @@ const groupClicksByIp = data =>
     acc[ip] = Object.fromEntries(
       Object.entries(acc[ip]).slice(0, MAX_CLICKS_BY_IP)
     );
-  console.log(acc)
+
     return acc;
   }, {});
 
